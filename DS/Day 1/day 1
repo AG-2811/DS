@@ -1,0 +1,92 @@
+
+# int
+a = 5678
+print(a,type(a))
+# float
+b = 489.156
+print(b,type(b))
+# complex
+c = 4586+8j
+print(c,type(c))
+# int, float, complex = numerical
+#str
+d = 'Hello python'
+print(d,type(d))
+# tuple
+e = (2,23,42332,3)
+print(e,type(e))
+# list
+f = [2,23,42332,3]
+print(f,type(f))
+#tycasting
+std_id = [1,2,2,2,3,4,5,3,4,6]
+std_id = list(set(std_id))
+print(std_id)
+#dictonary / hash
+g = {'Name':'Aman', 'Age': 67, 'Address': 'Delhi'}
+print(g,type(g))
+data = {'Region':['North','SOuth','West','East'],
+        'Sales':[3423,4353,2131,5646],
+        'Profit':[120,34,25,21]}
+
+#table = pd.table(data)
+print(data)
+import random
+#from readline import redisplay
+random.randint(10000,20000)
+import numpy as np
+np.random.randint(10000,60000) #for random values
+#import time
+#for i in range(20):
+ #   print(time.asctime())
+  #  time.sleep(1)
+   # display(clear = True)
+import random
+user_attempt= 3
+#for i in range(user_attempt):
+ #   comp_choice = random.randint(1,10)
+  #  user_choice = int(input('Enter your choice(1-10): '))
+   # print(f'''
+    #    User choice: {user_choice}
+     #   Computer choice: {comp_choice}''' )
+    #if user_choice == comp_choice:
+     #   print('User won')
+    #else:
+     #   print('User lose')
+Questions = {1:'Who was the first Prime Minister of independent India?',
+             2:'What is the capital of Australia?',
+             3:'Which planet is known as the "Red Planet"?'} 
+options = {1:'''A) Mahatma Gandhi
+B) Jawaharlal Nehru
+C) Sardar Vallabhbhai Patel
+D) Subhas Chandra Bose''',
+2: '''A) Sydney
+B) Melbourne
+C) Canberra
+D) Brisbane''',
+3: '''A) Venus
+B) Mars
+C) Jupiter
+D) Mercury'''}
+answers = ['B','C','B']
+for i in range(1,len(Questions)+1):
+    print(f'Question {i}: ',Questions[i])
+    print(options[i])
+    win_amount = 0
+    user_choice=input('Enter your choice: ').upper()
+    correct_ans = answers[i-1]
+    if user_choice==correct_ans:
+        win_amount += 10000
+        print('Correct answer')
+        print(end='\n')
+    else:
+        print('Better luck next time')
+        break
+
+print('Total AMount won: ',win_amount)
+def vote(age):
+    age = int(input('Enter your age: '))
+    if age > 18:
+        print('You can vote.')
+    else:
+        print('Your are minor.')
